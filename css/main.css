@@ -84,6 +84,128 @@ img {
 
 }
 
+#main > div:nth-child(1) {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 5px;
+}
+
+.calendar-container1, .calendar-container2 {
+    width: 100%;
+    height: 60vh;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .calendar-container1 {
+      grid-column-start: 2;
+  }
+
+  .calendar-container2 {
+    grid-column-start: 3;
+}
+  
+  .calendar {
+    width: 22rem;
+    height: 24rem;
+    background-color: #F0F0F0;
+  }
+
+  i.fa-angle-right,
+  i.fa-angle-left {
+      color: #747474;
+  }
+  
+  .month {
+    width: 100%;
+    height: 3rem;
+    background-color: #dddddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    text-align: center;
+  }
+  
+  .month i {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .month h1 {
+    color: #777;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    
+  }
+  
+  .month p {
+    color: rgb(128, 128, 128);
+    font-size: 0.8rem;
+  }
+
+  .date {
+      width: 100%;
+  }
+  
+  .weekdays {
+    width: 100%;
+    height: 3rem;
+    padding: 0 0.2rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .weekdays div {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #000000;
+    letter-spacing: 0.1rem;
+    width: calc(21.2rem / 7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .days {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.2rem;
+  }
+  
+  .days div {
+    margin: 0.3rem;
+    width: calc(21rem / 7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s;
+    font-size: 1.2rem;
+    height: 2.3rem;
+    color: black;
+  }
+  
+  .days div:hover:not(.today) {
+    background-color: #afafaf;
+    border: 0.2rem solid #777;
+    cursor: pointer;
+  }
+  
+  .prev-date,
+  .next-date {
+    opacity: 0.5;
+  }
+  
+  .today {
+    background-color: #167e56;
+  }
+
 footer {
     display: flex;
     justify-content: space-between;
