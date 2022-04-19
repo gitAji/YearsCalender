@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/6b1d78fca9.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <header>
     <div class="container flex">
       <nav>
         <div id="logo">
@@ -33,7 +36,31 @@
         </div>
       </nav>
     </div>
-  </body>
+  </header>
+  <section id="main">
+    <div class="container">
+      <div class="calendar">
+        <div class="month">
+          <i class="fas fa-angle-left prev"></i>
+          <div class="date">
+            <h1></h1>
+            <p></p>
+          </div>
+          <i class="fas fa-angle-right next"></i>
+        </div>
+        <div class="weekdays">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+        <div class="days"></div>
+      </div>
+    </div>
+  </section>
   <footer>
     <div class="links">
       <a href="">About us</a>
@@ -55,4 +82,6 @@
     </div>
     <p>All rights reserved!</p>
   </footer>
+</body>
+
 </html>
