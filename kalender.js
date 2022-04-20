@@ -55,9 +55,9 @@ const renderCalendar = () => {
             i === new Date().getDate() &&
             date.getMonth() === new Date().getMonth()
         ) {
-            days += `<div class="today">${i}</div>`;
+            days += `<div class="today test">${i}</div>`;
         } else {
-            days += `<div>${i}</div>`;
+            days += `<div class="test">${i}</div>`;
         }
     }
 
@@ -65,6 +65,11 @@ const renderCalendar = () => {
         days += `<div class="next-date">${j}</div>`;
     }
     monthDays.innerHTML = days;
+
+    const test = document.querySelectorAll('div.test');
+    console.log(test);
+
+    for (let item of test) item.addEventListener('click', function (e) { console.log(this.innerText) });
 };
 
 document.querySelector(".prev").addEventListener("click", () => {

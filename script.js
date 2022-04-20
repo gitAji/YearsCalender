@@ -25,3 +25,31 @@ function listPosts(tasks) {
     }
     output.innerHTML = myList;
 }
+
+
+// var el = document.getElementsByClassName("test");
+// document.addEventListener('click', function () {
+//     console.log('hellooox')
+// })
+
+// function ut() {
+//     console.log(hellloooooo);
+// }
+
+// var tet = document.getElementsByClassName("test");
+// tet.addEventListener("click", ut, true);
+
+// var test = document.getElementsByClassName('test');
+// test.onclick = function () {
+//     console.log('Hellooooo');
+// }
+
+
+// const log = function () {
+//     console.log('Hellooooo');
+// }
+
+// document.getElementsByClassName('test').onclick = log;
+
+const test = document.querySelectorAll('div.test');
+console.log(test);
