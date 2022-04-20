@@ -181,7 +181,7 @@ button {
 }
 
 #main>div:nth-child(1) {
-    padding: 40px;
+    padding: 15px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 5px;
@@ -190,7 +190,7 @@ button {
 .calendar-container1,
 .calendar-container2 {
     width: 100%;
-    height: 64vh;
+    height: fit-content;
     color: #eee;
     display: flex;
     justify-content: center;
@@ -204,11 +204,11 @@ button {
 .calendar-container2 {
     grid-column-start: 3;
 }
-
 .calendar {
     width: 22rem;
-    height: 27rem;
+    height: fit-content;
     background-color: #F0F0F0;
+    border-radius: 15px;
 }
 
 i.fa-angle-right,
@@ -223,8 +223,8 @@ i.fa-angle-left {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
     text-align: center;
+    border-radius: 15px 15px 0 0;
 }
 
 .month i {
@@ -283,7 +283,7 @@ i.fa-angle-left {
     justify-content: center;
     align-items: center;
     transition: background-color 0.2s;
-    font-size: 1.2rem;
+    font-size: 1rem;
     height: 2.3rem;
     color: black;
 }
