@@ -3,10 +3,12 @@
     --secondary-color: #07A97E;
     --dark-color: #000000;
     --white-color: #ffffff;
-
-    --light-color: #3f3f3f;
-    --success-color: #5cb85c;
-    --error-color: #d9534f;
+    --light-color: #dcdcdc97;
+    --gray-color: #3f3f3f;
+    --student-color: #FC0079;
+    --teacher-color: #6D29F6;
+    --admin-color: #0095FF;
+    
 }
 
 * {
@@ -17,7 +19,7 @@
 
 body {
     font-family: Helvetica, sans-serif;
-    background-color: #fff;
+    font-size: 14px;
 }
 
 a {
@@ -72,6 +74,7 @@ img {
     width: 100%;
 }
 
+/* search section starts */
 .search-section {
     display: flex;
     justify-content: center;
@@ -79,34 +82,87 @@ img {
     width: 100%;
     height: 100%;
     padding: 20px;
+    margin-bottom: 20px;
+    border-radius:12px;
     color: var(--dark-color);
     background-color: var(--primary-color);
 }
-i{
+
+i {
     margin: 12px 40px;
     color: var(--white-color);
-}
-select{
-    margin: 10px;
-    color: var(--light-color);
-    border: 0;
-   
+    font-size: 18px;
 }
 
-input{
+select {
     margin: 10px;
-    color: var(--light-color);
+    color: var(--gray-color);
     border: 0;
-   
+
 }
-button{
+
+input {
     margin: 10px;
+    color: var(--gray-color);
+    border: 0;
+
+}
+
+button {
+    margin: 10px 20px;
     padding: 10px 20px;
     color: var(--white-color);
+    border-radius: 0px 30px;
     border: 0;
-    box-shadow: 0px 0px 10px 0px rgba(254, 254, 254, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(43, 43, 43, 0.089);
     background-color: var(--secondary-color);
 }
+
+/* search section ends */
+
+/* results cart starts */
+.results {
+    max-width: 1100px;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: var(--light-color);
+    background: linear-gradient(180deg, rgba(196, 196, 196, 0.0104) 0%, rgba(255, 255, 255, 0.13) 100%);
+box-shadow: 0px 4px 200px rgba(0, 0, 0, 0.1);
+border-radius: 0px;
+}
+
+.result-cart {
+    display: flex;
+    padding: 12px;
+    position: relative;
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result-header p {
+    font-weight: bold;
+    align-items: center;
+    padding: 5px 20px ;
+    margin: 20px 0;
+}
+.result-header i{
+    color: var(--gray-color);
+}
+
+.result-body {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    margin: 12px 0;
+}
+.student {
+color: var(--student-color);
+}
+/* results cart ends */
 .container {
     margin: 0 auto;
     padding: 0;
@@ -119,42 +175,43 @@ button{
 
 }
 
-#main > div:nth-child(1) {
+#main>div:nth-child(1) {
     padding: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 5px;
 }
 
-.calendar-container1, .calendar-container2 {
+.calendar-container1,
+.calendar-container2 {
     width: 100%;
     height: 64vh;
     color: #eee;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .calendar-container1 {
-      grid-column-start: 2;
-  }
+.calendar-container1 {
+    grid-column-start: 2;
+}
 
-  .calendar-container2 {
+.calendar-container2 {
     grid-column-start: 3;
 }
-  
-  .calendar {
+
+.calendar {
     width: 22rem;
     height: 27rem;
     background-color: #F0F0F0;
-  }
+}
 
-  i.fa-angle-right,
-  i.fa-angle-left {
-      color: #747474;
-  }
-  
-  .month {
+i.fa-angle-right,
+i.fa-angle-left {
+    color: #747474;
+}
+
+.month {
     width: 100%;
     height: 3rem;
     background-color: #dddddd;
@@ -163,40 +220,40 @@ button{
     align-items: center;
     padding: 0 2rem;
     text-align: center;
-  }
-  
-  .month i {
+}
+
+.month i {
     font-size: 1.5rem;
     cursor: pointer;
-  }
-  
-  .month h1 {
+}
+
+.month h1 {
     color: #777;
-    font-size: 1.4rem;
-    font-weight: 400;
+    font-size: 1.2rem;
+    font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-    
-  }
-  
-  .month p {
+
+}
+
+.month p {
     color: rgb(128, 128, 128);
     font-size: 0.8rem;
-  }
+}
 
-  .date {
-      width: 100%;
-  }
-  
-  .weekdays {
+.date {
+    width: 100%;
+}
+
+.weekdays {
     width: 100%;
     height: 3rem;
     padding: 0 0.2rem;
     display: flex;
     align-items: center;
-  }
-  
-  .weekdays div {
+}
+
+.weekdays div {
     font-size: 0.8rem;
     font-weight: 400;
     color: #000000;
@@ -205,16 +262,16 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .days {
+}
+
+.days {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     padding: 0.2rem;
-  }
-  
-  .days div {
+}
+
+.days div {
     margin: 0.3rem;
     width: calc(21rem / 7);
     display: flex;
@@ -224,46 +281,49 @@ button{
     font-size: 1.2rem;
     height: 2.3rem;
     color: black;
-  }
-  
-  .days div:hover:not(.today) {
+}
+
+.days div:hover:not(.today) {
     background-color: #afafaf;
     border: 0.2rem solid #777;
     cursor: pointer;
-  }
-  
-  .prev-date,
-  .next-date {
-    opacity: 0.5;
-  }
-  
-  .today {
-    background-color: #167e56;
-  }
+}
 
-  .content-box {
+.prev-date,
+.next-date {
+    opacity: 0.5;
+}
+
+.today {
+    background-color: #167e56;
+}
+
+.content-box {
     width: 26rem;
     height: 14rem;
     background-color: #167e56;
     grid-column-start: 2;
-  }
+}
 
 footer {
     display: flex;
     justify-content: space-between;
     padding: 12px 12px;
-    background-color: var(--light-color);
+    background-color: var(--gray-color);
     color: var(--white-color);
 }
-.links{
-  padding: 20px;  
+
+.links {
+    padding: 20px;
 }
-.links a{
-display: block;
-padding: 12px 12px;
-color:var(--white-color);
+
+.links a {
+    display: block;
+    padding: 12px 12px;
+    color: var(--white-color);
 }
+
 p {
-    display:block;
+    display: block;
     flex-direction: column;
 }
