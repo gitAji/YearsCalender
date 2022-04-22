@@ -193,7 +193,7 @@ button {
 #main>div:nth-child(1) {
     padding: 15px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
     grid-gap: 5px;
 }
 .main-text {
@@ -308,8 +308,7 @@ i.fa-angle-left {
 }
 
 .days div {
-    margin: 0.3rem;
-    width: calc(21rem / 7);
+    width: calc(21.2rem / 7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -338,11 +337,17 @@ i.fa-angle-left {
     width: 22rem;
     height: 8rem;
     grid-column-start: 2;
+    color: #000000;
     background: #F7F7F7;
     border: 1px solid rgba(0, 0, 0, 0.15);
     box-sizing: border-box;
     border-radius: 10px;
 }
+
+.content-box p {
+    padding: 10px;
+}
+
 
 footer {
     display: flex;
