@@ -105,6 +105,7 @@ select {
 
 input {
     margin: 10px;
+    padding:0 2px;
     color: var(--gray-color);
     border: 0;
     border-radius: 2px;
@@ -135,8 +136,7 @@ button {
    
 }
 
-.result-cart {
-    display: flex;
+.result-card {
     padding: 12px 12px;
     margin-bottom: 50px;
     background-color: var(--light-color);

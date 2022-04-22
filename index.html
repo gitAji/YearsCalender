@@ -74,11 +74,11 @@
   <div class="search-section">
     <div class="role">
       <i class="fa-solid fa-user"></i>
-      <select name="" id="role">
-        <option value="">Select Role</option>
-        <option value="">Student</option>
-        <option value="">Teacher</option>
-        <option value="">Administrator</option>
+      <select name="role" id="role">
+        <option value="All">All</option>
+        <option value="Student">Student</option>
+        <option value="Teacher">Teacher</option>
+        <option value="Admin">Admin</option>
       </select>
     </div>
     <div class="course">
@@ -97,7 +97,7 @@
     </div>
     <div class="duration">
       <i class="fa-solid fa-calendar"></i>
-      <input type="date" id="start" name="date" value="2022-04-22" min="2005-01-01" max="2025-12-31">
+      <input type="date" id="due-date" name="date" value="dd-mm-yyyy" min="2005-01-01" max="2025-12-31">
     </div>
     <div class="location">
       <i class="fa-solid fa-location-dot"></i>
@@ -113,11 +113,14 @@
     <button>Search</button>
   </div>
   <div class="results">
+    <div class="result-card">
+      <p>Loading...</p>
+    </div>
     
       <!-- head of the results cart -->
      
         
-     <p>Loading...</p>
+     
    
     </div>
   </div>
