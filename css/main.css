@@ -390,7 +390,7 @@ p {
     font-weight: 200;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-    padding:0px;
+    padding:10px 0;
 }
 .links p {
     font-size: 0.8rem;

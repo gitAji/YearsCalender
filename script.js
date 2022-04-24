@@ -62,7 +62,6 @@ function listPosts(tasks) {
 const roleDropdown = document.querySelector("#role");
 const courseDropdown = document.querySelector("#course");
 
-
 const filterData = () => {
   let myFilteredList = [];
   let catChosen = [];
