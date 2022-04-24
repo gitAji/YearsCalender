@@ -27,7 +27,7 @@ function listPosts(tasks) {
           </div>
           <div class="course">
             <i class="fa-solid fa-book"></i>
-            <p>FED</p>
+            <p>All Courses</p>
           </div>
           <div class="due-date">
             <i class="fa-solid fa-calendar"></i>
@@ -35,7 +35,7 @@ function listPosts(tasks) {
           </div>
           <div class="location">
             <i class="fa-solid fa-location-dot"></i>
-            <p>Bergen</p>
+            <p>All Campuses</p>
           </div>
         </div>
         <div class="result-body">
