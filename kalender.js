@@ -79,29 +79,37 @@ const renderCalendar = () => {
         .catch((error) => {
             console.error('Error:', error);
         });
+
+
     const month = document.querySelector('div.date');
     const resultOutput = document.querySelector('div.content-box');
     const test = document.querySelectorAll('div.test');
+    test.style.backgroundColor = "red";
     let listPosts = (data) => {
         resultOutput.innerHTML = "";
         let myList = "";
         for (item of data) {
             let tags = item.tags;
             let title = item.title.rendered;
-            //console.log(tags);
 
             myList += `
         <p class="black">
-           ${title}
+           ${title} + ${tags}
         </p>`;
+
+            if (tags == test.innerHTML) {
+
+            }
         }
         resultOutput.innerHTML = myList;
     }
 
+
+
     for (let item of test) item.addEventListener('click', function (e) {
         console.log(item.innerHTML)
         resultOutput.innerHTML = item.innerHTML;
-        //console.log(allData);
+        console.log(allData);
         let temporary = [];
         for (let myEvent of allData) {
             if (myEvent.tags[0] == item.innerHTML) {
@@ -117,7 +125,9 @@ const renderCalendar = () => {
         } else {
             listPosts(temporary);
         }
+
     });
+
 }
 
 document.querySelector(".prev").addEventListener("click", () => {

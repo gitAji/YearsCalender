@@ -398,3 +398,46 @@ p {
     width:40%;
     padding:0px;
 }
+
+@media (max-width: 430px) {
+
+#logo {
+        min-width: 140px;
+    }
+nav ul {
+    display: none;
+}
+
+#main > div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar-container2 {
+    display: none;
+}
+
+.search-section {
+    display: none;
+}
+
+.role, .course, .due-date, .location {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+}
+
+.due-date {
+    display: none;
+}
+
+.dot {
+    padding: 15px;
+}
+
+i {
+    font-size: 1em;
+    margin: 0;
+}
+
