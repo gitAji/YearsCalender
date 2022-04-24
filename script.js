@@ -27,7 +27,7 @@ function listPosts(tasks) {
           </div>
           <div class="course">
             <i class="fa-solid fa-book"></i>
-            <p>All Courses</p>
+            <p>${task.tags}</p>
           </div>
           <div class="due-date">
             <i class="fa-solid fa-calendar"></i>
@@ -90,14 +90,26 @@ const filterData = () => {
 
     });
   }
+ /*
+  let courseChosen = [];
+  courseChosen.push(courseDropdown.value);
+  console.log (courseChosen);
+  if (courseChosen == "All") {
+    myFilteredList = myData.slice();}
+    else{
+    myFilteredList= myData.filter((task) => {
+    if (task.tags == courseDropdown.value) {
+    return true;
+    }
+    return false;
+    });
+  //Do filtering on Filtered stuff from above
 
+  }
+*/
   listPosts(myFilteredList);
-
-  //   let myFilteredList2 = []; 
-  //   myFilteredList2.push(courseDropdown.value);
-  //   console.log (myFilteredList2);
-  // Do filtering on Filtered stuff from above
-
+  
 }
 roleDropdown.addEventListener("change", filterData);
 courseDropdown.addEventListener("change", filterData);
+

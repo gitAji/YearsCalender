@@ -70,7 +70,7 @@ nav ul li {
     max-height: 20px;
     margin: 15px 12px;
     cursor: pointer;
-    
+
 
 }
 
@@ -107,7 +107,7 @@ select {
 
 input {
     margin: 10px;
-    padding:0 2px;
+    padding: 0 2px;
     color: var(--gray-color);
     border: 0;
     border-radius: 2px;
@@ -116,9 +116,9 @@ input {
 
 button {
     margin: 10px 20px;
-    padding: 10px 20px;
+    padding: 10px 40px;
     color: var(--white-color);
-    border-radius: 0px 30px;
+    border-radius: 5px;
     border: 0;
     cursor: pointer;
     box-shadow: 0px 0px 10px 0px rgba(43, 43, 43, 0.089);
@@ -136,7 +136,7 @@ button {
     background: linear-gradient(180deg, rgba(196, 196, 196, 0.0104) 0%, rgba(255, 255, 255, 0.13) 100%);
     box-shadow: 0px 4px 200px rgba(0, 0, 0, 0.1);
     border-radius: 0px;
-   
+
 }
 
 .result-card {
@@ -153,7 +153,7 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
+
 }
 
 .result-header p {
@@ -165,14 +165,14 @@ button {
 
 .result-header i {
     color: var(--gray-color);
-   
+
 }
 
 .result-body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-   margin-block: 20px;
+    margin-block: 20px;
 
 }
 
@@ -193,34 +193,41 @@ button {
 
 }
 
-#main>div:nth-child(1) {
+.main {
     padding: 15px;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-gap: 5px;
 }
-.main-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    margin: 20px auto;
-    background-color: var(--light-color);
-    background: linear-gradient(180deg, rgba(196, 196, 196, 0.0104) 0%, rgba(255, 255, 255, 0.13) 100%);
-    box-shadow: 0px 4px 200px rgba(0, 0, 0, 0.1);
-    border-radius: 0px;
+
+.main>div :nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 1/2;
 }
-  
-.main-text h1 {
+
+.main>div :nth-child(2) {
+    padding: 15px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+
+}
+
+
+.main h2 {
     font-size: 30px;
-    font-variant: small-caps;
     color: var(--dark-color);
-    margin: 20px 0;
+    margin: 20px 20px;
+
 }
-.main-content{
-    grid-column-start: 1;
+
+.main p {
+    font-size: 18px;
+    color: var(--dark-color);
+    margin: 20px 10px;
+    padding: 10px;
+    line-height: 1.5;
 }
+
 .calendar-container1,
 .calendar-container2 {
     width: 100%;
@@ -238,11 +245,14 @@ button {
 .calendar-container2 {
     grid-column-start: 3;
 }
+
 .calendar {
-    width: 22rem;
+    width: 20rem;
     height: fit-content;
     background-color: #F0F0F0;
     border-radius: 15px;
+    background: linear-gradient(180deg, rgba(196, 196, 196, 0.0104) 0%, rgba(255, 255, 255, 0.13) 100%);
+    box-shadow: 0px 4px 200px rgba(0, 0, 0, 0.1);
 }
 
 i.fa-angle-right,
@@ -333,18 +343,21 @@ i.fa-angle-left {
 }
 
 .today {
-    background-color: #167e56;
+    background-color:var(--secondary-color);
+    
 }
 
 .content-box {
-    width: 22rem;
-    height: 8rem;
+    width: 20rem;
+    height: 6rem;
     grid-column-start: 2;
     color: #000000;
     background: #F7F7F7;
     border: 1px solid rgba(0, 0, 0, 0.15);
     box-sizing: border-box;
     border-radius: 10px;
+    background: linear-gradient(180deg, rgba(196, 196, 196, 0.0104) 0%, rgba(255, 255, 255, 0.13) 100%);
+    box-shadow: 0px 4px 200px rgba(0, 0, 0, 0.1);
 }
 
 .content-box p {
@@ -370,19 +383,21 @@ footer {
 }
 
 .links {
-    padding: 20px;
+    padding: 10px 30px;
 }
 
 .links a {
     display: block;
-    padding: 12px 12px;
+    padding: 12px 0px;
     color: var(--white-color);
 }
 
 p {
     display: block;
     flex-direction: column;
- 
+
+    
+
 }
 
 .links h3 {
@@ -390,8 +405,9 @@ p {
     font-weight: 200;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-    padding:10px 0;
+    padding: 10px 0;
 }
+
 .links p {
     font-size: 0.8rem;
     color: rgb(255, 255, 255);
@@ -441,3 +457,7 @@ i {
     margin: 0;
 }
 
+    color: var(--white-color);
+    width: 40%;
+    padding: 0px;
+}
