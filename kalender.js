@@ -103,6 +103,11 @@ const renderCalendar = () => {
         resultOutput.innerHTML = myList;
     }
 
+    for (let item of data) {
+        console.log(item);
+    }
+
+
 
 
 
