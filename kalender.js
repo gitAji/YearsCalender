@@ -103,12 +103,6 @@ const renderCalendar = () => {
         resultOutput.innerHTML = myList;
     }
 
-    for (let item of data) {
-        console.log(item);
-    }
-
-
-
 
 
     for (let item of test) item.addEventListener('click', function (e) {
@@ -132,6 +126,20 @@ const renderCalendar = () => {
         }
 
     });
+
+    let interval = setInterval(function () {
+        // get elem
+        if (typeof allData == 'undefined') return;
+        clearInterval(interval);
+
+        for (let item of allData) {
+            //console.log(item.tags);
+            if (test.innerHTML == item.tags[0]) {
+                test.style.backgroundColor = "red";
+            }
+        }
+
+    }, 10);
 
 }
 
