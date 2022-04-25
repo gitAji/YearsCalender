@@ -415,7 +415,7 @@ p {
     padding:0px;
 }
 
-@media (max-width: 430px) {
+@media (max-width: 680px) {
 
 #logo {
         min-width: 140px;
@@ -424,10 +424,14 @@ nav ul {
     display: none;
 }
 
-#main > div:nth-child(1) {
+.main {
     display: flex;
     flex-direction: column;
 }
+
+.main > div:nth-child(1) > p:nth-child(3) {
+    display: none;
+    }
 
 .calendar-container2 {
     display: none;
@@ -456,8 +460,4 @@ i {
     font-size: 1em;
     margin: 0;
 }
-
-    color: var(--white-color);
-    width: 40%;
-    padding: 0px;
 }

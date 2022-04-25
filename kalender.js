@@ -84,7 +84,6 @@ const renderCalendar = () => {
     const month = document.querySelector('div.date');
     const resultOutput = document.querySelector('div.content-box');
     const test = document.querySelectorAll('div.test');
-    test.style.backgroundColor = "red";
     let listPosts = (data) => {
         resultOutput.innerHTML = "";
         let myList = "";
@@ -106,6 +105,7 @@ const renderCalendar = () => {
 
 
 
+
     for (let item of test) item.addEventListener('click', function (e) {
         console.log(item.innerHTML)
         resultOutput.innerHTML = item.innerHTML;
@@ -116,10 +116,10 @@ const renderCalendar = () => {
                 temporary.push(myEvent);
                 //console.log("datoriktig");
             }
-            console.log(myEvent.tags);
+            //console.log(myEvent.tags);
 
         }
-        console.log(temporary.length);
+        //console.log(temporary.length);
         if (temporary.length === 0) {
             resultOutput.innerHTML = `<p>Ingen treff</p>`;
         } else {
