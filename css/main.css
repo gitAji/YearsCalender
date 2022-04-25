@@ -428,6 +428,9 @@ nav ul {
     display: flex;
     flex-direction: column;
 }
+.main p{
+    line-height: 1.75;
+}
 
 .main > div:nth-child(1) > p:nth-child(3) {
     display: none;
@@ -459,5 +462,11 @@ nav ul {
 i {
     font-size: 1em;
     margin: 0;
+}
+footer{
+    flex-direction: column;
+}
+.links p{
+    line-height: 1.5;
 }
 }
