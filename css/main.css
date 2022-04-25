@@ -337,6 +337,10 @@ i.fa-angle-left {
     cursor: pointer;
 }
 
+.today {
+    cursor: pointer;
+}
+
 .prev-date,
 .next-date {
     opacity: 0.5;
@@ -466,6 +470,13 @@ i {
 footer{
     flex-direction: column;
 }
+
+.links p {
+    width: 90%;
+}
+
+div.links:nth-child(3), div.links:nth-child(4) {
+    display: none;
 .links p{
     line-height: 1.5;
 }
