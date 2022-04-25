@@ -74,6 +74,7 @@ const renderCalendar = () => {
         .then(data => {
             //console.log('Success:', data);
             allData = data;
+
             //listPosts(allData);
         })
         .catch((error) => {
@@ -84,34 +85,54 @@ const renderCalendar = () => {
     const month = document.querySelector('div.date');
     const resultOutput = document.querySelector('div.content-box');
     const test = document.querySelectorAll('div.test');
-    let listPosts = (data) => {
+    let listPosts = (allData) => {
         resultOutput.innerHTML = "";
         let myList = "";
-        for (item of data) {
+        for (item of allData) {
             let tags = item.tags;
             let title = item.title.rendered;
 
             myList += `
         <p class="black">
-           ${title} + ${tags}
+           ${title}
         </p>`;
         }
         resultOutput.innerHTML = myList;
     }
 
+    let interval = setInterval(function () {
+        // get elem
+        if (typeof allData == 'undefined') return;
+        clearInterval(interval);
+
+        for (let item of allData) {
+            for (let divs of test) {
+                test.innerHTML = divs;
+                if (divs.innerHTML == item.date.slice(8, 10)) {
+                    divs.style.backgroundColor = "#fb4040";
+                    divs.style.borderRadius = "10px";
+                }
+            }
+
+        }
+
+
+    }, 10);
+
+
 
 
     for (let item of test) item.addEventListener('click', function (e) {
-        console.log(item.innerHTML)
+        //console.log(item.innerHTML)
         resultOutput.innerHTML = item.innerHTML;
-        console.log(allData);
+        //console.log(allData);
         let temporary = [];
         for (let myEvent of allData) {
-            if (myEvent.tags[0] == item.innerHTML) {
+            if (myEvent.date.slice(8, 10) == item.innerHTML) {
                 temporary.push(myEvent);
                 //console.log("datoriktig");
             }
-            //console.log(myEvent.tags);
+            //console.log(myEvent);
 
         }
         //console.log(temporary.length);
@@ -122,23 +143,6 @@ const renderCalendar = () => {
         }
 
     });
-
-    let interval = setInterval(function () {
-        // get elem
-        if (typeof allData == 'undefined') return;
-        clearInterval(interval);
-
-        for (let item of allData) {
-            for (let divs of test) {
-                test.innerHTML = divs;
-                if (divs.innerHTML == item.tags[0]) {
-                    divs.style.backgroundColor = "#fb4040";
-                    divs.style.borderRadius = "10px";
-                }
-            }
-        }
-
-    }, 10);
 
 }
 

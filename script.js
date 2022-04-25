@@ -1,24 +1,24 @@
 const url = "https://noroff.norgetamil.com/wp-json/wp/v2/posts";
 let myData;
 fetch(url)
-  .then(response => response.json())
-  .then(data => {
-    //console.log('Success:', data);
-    myData = data;
-    listPosts(data);
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-  });
+    .then(response => response.json())
+    .then(data => {
+        //console.log('Success:', data);
+        myData = data;
+        listPosts(data);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
 
 const output = document.querySelector(".results");
 console.log(output);
 
 function listPosts(tasks) {
-  let myList = "";
-  for (let task of tasks) {
-    console.log(task);
-    myList += `
+    let myList = "";
+    for (let task of tasks) {
+        console.log(task);
+        myList += `
         <div class="result-card">
         <div class="result-header">
           <div class="role">
@@ -52,10 +52,10 @@ function listPosts(tasks) {
       </div>
       
         `;
-    //console.log(myList);
-  }
-  // listPosts(myList);
-  output.innerHTML = myList;
+        //console.log(myList);
+    }
+    // listPosts(myList);
+    output.innerHTML = myList;
 }
 
 
@@ -63,52 +63,52 @@ const roleDropdown = document.querySelector("#role");
 const courseDropdown = document.querySelector("#course");
 
 const filterData = () => {
-  let myFilteredList = [];
-  let catChosen = [];
+    let myFilteredList = [];
+    let catChosen = [];
 
-  //console.log("Hello");
-  //console.log(roleDropdown.value);
-  catChosen.push(roleDropdown.value);
-  console.log(catChosen);
-  // Do filtering on ALL the tasks
-  if (catChosen == "All") {
-    myFilteredList = myData.slice();
-    console.log(myFilteredList);
-  } else {
-    // Filter ot those tasks with type equal to the type chosen
-    myFilteredList = myData.filter((task) => {
-      if (task.categories == roleDropdown.value) {
-        return true;
+    //console.log("Hello");
+    //console.log(roleDropdown.value);
+    catChosen.push(roleDropdown.value);
+    console.log(catChosen);
+    // Do filtering on ALL the tasks
+    if (catChosen == "All") {
+        myFilteredList = myData.slice();
+        console.log(myFilteredList);
+    } else {
+        // Filter ot those tasks with type equal to the type chosen
+        myFilteredList = myData.filter((task) => {
+            if (task.categories == roleDropdown.value) {
+                return true;
 
-      }
-      //console.log(task.categories);
+            }
+            //console.log(task.categories);
 
-      //console.log(myFilteredList);
+            //console.log(myFilteredList);
 
-      return false;
+            return false;
 
 
-    });
-  }
- /*
-  let courseChosen = [];
-  courseChosen.push(courseDropdown.value);
-  console.log (courseChosen);
-  if (courseChosen == "All") {
-    myFilteredList = myData.slice();}
-    else{
-    myFilteredList= myData.filter((task) => {
-    if (task.tags == courseDropdown.value) {
-    return true;
+        });
     }
-    return false;
-    });
-  //Do filtering on Filtered stuff from above
+    /*
+     let courseChosen = [];
+     courseChosen.push(courseDropdown.value);
+     console.log (courseChosen);
+     if (courseChosen == "All") {
+       myFilteredList = myData.slice();}
+       else{
+       myFilteredList= myData.filter((task) => {
+       if (task.tags == courseDropdown.value) {
+       return true;
+       }
+       return false;
+       });
+     //Do filtering on Filtered stuff from above
+   
+     }
+   */
+    listPosts(myFilteredList);
 
-  }
-*/
-  listPosts(myFilteredList);
-  
 }
 roleDropdown.addEventListener("change", filterData);
 courseDropdown.addEventListener("change", filterData);
