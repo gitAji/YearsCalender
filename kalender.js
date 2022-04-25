@@ -95,10 +95,6 @@ const renderCalendar = () => {
         <p class="black">
            ${title} + ${tags}
         </p>`;
-
-            if (tags == test.innerHTML) {
-
-            }
         }
         resultOutput.innerHTML = myList;
     }
@@ -133,9 +129,12 @@ const renderCalendar = () => {
         clearInterval(interval);
 
         for (let item of allData) {
-            //console.log(item.tags);
-            if (test.innerHTML == item.tags[0]) {
-                test.style.backgroundColor = "red";
+            for (let divs of test) {
+                test.innerHTML = divs;
+                if (divs.innerHTML == item.tags[0]) {
+                    divs.style.backgroundColor = "#fb4040";
+                    divs.style.borderRadius = "10px";
+                }
             }
         }
 

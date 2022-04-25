@@ -337,6 +337,10 @@ i.fa-angle-left {
     cursor: pointer;
 }
 
+.today {
+    cursor: pointer;
+}
+
 .prev-date,
 .next-date {
     opacity: 0.5;
