@@ -440,7 +440,7 @@ nav ul {
     display: none;
 }
 
-.search-section {
+.search-section > div:nth-child(1), .search-section > div:nth-child(2), .search-section > div:nth-child(3), .search-section > div:nth-child(4)  {
     display: none;
 }
 
